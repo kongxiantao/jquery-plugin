@@ -1,0 +1,84 @@
+@CHARSET "UTF-8";
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul, ol, li, 
+pre,form, fieldset, legend, button, input, textarea,th, td {    margin: 0;    padding: 0;}
+body,button, input, select, textarea {font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;}
+
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; }
+code, kbd, pre, samp { font-family: courier new, courier, monospace; } 
+small { font-size: 12px; } 
+ul, ol { list-style: none; }
+
+a { text-decoration: none;cursor:pointer; outline:none;blr:expression(this.onFocus=this.blur()) }
+a:hover{color:#67af28 }
+
+em { font-style:normal}
+sup { vertical-align: text-top; } 
+sub { vertical-align: text-bottom; }
+legend { color: #000; }
+fieldset, img { border: 0; } 
+button, input, select, textarea { font-size: 100%; } 
+table { border-collapse: collapse; border-spacing: 0; }
+
+article, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section,
+summary, time, mark, audio, video {  display: block; margin: 0;padding: 0;}
+mark { background: #ff0; }
+
+.clearfix:after { clear: both; content: "";display: block;height: 0;visibility: hidden;}
+.clearfix {display: inline-block;}
+* + html .clearfix { height: 1%;}
+.clearfix {display: block;}
+
+
+
+#tab_list{width:800px;margin:20px auto;height:800px;background-color:#f5f5f5;padding-top:30px;padding-left:70px;}
+#tab_list li{float: left;
+    height: 137px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    position: relative;
+    width: 180px;
+    z-index: 9;}
+#tab_list li i {
+	background: url("images/album2.png") no-repeat scroll 0 0 transparent;
+    background-position: -15px -150px;
+    height: 15px;
+    left: 6px;
+    position: absolute;
+    top: 6px;
+    visibility: hidden;
+    width: 15px;
+}	
+
+#tab_list li.hover i, #tab_list li.ondrag i {
+    visibility: visible;
+    z-index: 100;
+}
+
+#tab_list .photobg {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border: 1px solid #CCCCCC;
+    display: block;
+    height: 97px;
+    padding: 4px;
+    position: absolute;
+    width: 130px;
+}
+
+#tab_list .photobg .imgcontainer {
+    background-position: center 15%;
+    background-repeat: no-repeat;
+    display: block;
+    height: 97px;
+    overflow: hidden;
+    text-align: center;
+    width: 130px;
+}
+
+
+
+	
+#tab_list .ondrag .photobg{border:1px solid #336699;}
+#tab_list li.placeholder{background:#fff;border:2px #eee dashed;height:107px;width:140px;margin-bottom:46px;margin-right:56px;}
+#tab_list .multiple .photobg{background:url(images/picList_bg.gif) 0 0 no-repeat;border:0;width:144px;height:111px;}
+.ui-effects-transfer { border: 2px dotted gray; height:97px;width:130px;}

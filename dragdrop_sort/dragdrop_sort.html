@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+	<head>
+		<mate charset="utf-8" />
+		<title> test  </title>
+		<link rel="stylesheet" href="dragdrop_sort.css" />
+	</head>
+	
+	<body>
+		
+		
+		<ul id="tab_list">
+			<!-- <li class="placeholder"></li> -->
+		
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/01.jpg');"></span>
+				</div>
+			</li>
+			
+			
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/02.jpg');"></span>
+				</div>
+			</li>
+			
+			
+			
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/03.jpg');"></span>
+				</div>
+			</li>
+			
+			
+			
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/02.jpg');"></span>
+				</div>
+			</li>
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/01.jpg');"></span>
+				</div>
+			</li>
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/02.jpg');"></span>
+				</div>
+			</li>
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/03.jpg');"></span>
+				</div>
+			</li>
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/02.jpg');"></span>
+				</div>
+			</li>
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/04.jpg');"></span>
+				</div>
+			</li>
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/01.jpg');"></span>
+				</div>
+			</li>
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/02.jpg');"></span>
+				</div>
+			</li>
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/03.jpg');"></span>
+				</div>
+			</li>
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/02.jpg');"></span>
+				</div>
+			</li>
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/04.jpg');"></span>
+				</div>
+			</li>
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/01.jpg');"></span>
+				</div>
+			</li>
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/02.jpg');"></span>
+				</div>
+			</li>
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/04.jpg');"></span>
+				</div>
+			</li>
+			
+			<li>
+				<i></i>
+				<div class="photobg">
+					<span class="imgcontainer" style="background-image: url('images/01.jpg');"></span>
+				</div>
+			</li>
+		</ul>
+		
+	
+		
+		<script src="jquery.js"></script>
+		<script src="jqueryui.js"></script>
+		<script src="dragdrop_sort.js"></script>
+		<script>
+			$(function(){
+				
+				var lis = $('#tab_list').find('li').not('.placeholder'),count = lis.size(),over = false;;
+				lis.each(function(i,item){
+					var self = $(this);
+					self.delay(i*100).effect( 'bounce',{distance:10,times:20},200,function(){
+						if( ( i+1 ) ===  count ){
+							$('#tab_list').find('.photobg').css({'cursor':'move'});
+							new K.DragdropSorter({
+								'multiple' : true,
+								'container' : $( '#tab_list' ),
+								'items' : $('#tab_list li')
+							});
+						}
+					});
+				});			
+			})
+		
+		
+			
+			
+		</script>
+		
+		
+	</body>
+
+
+</html>
